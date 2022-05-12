@@ -6,25 +6,34 @@ import static org.junit.jupiter.api.Assertions.*;
 class CalculatorTest {
     Calculate calculator = new Calculate();
 
-    @Test
-    @DisplayName("Test add 10+15 = 25")
-
-    void tenPlusFifteen(){assertEquals(25,25);}
 
     @Test
-    @DisplayName("Test add 45+10 = 5")
+    @DisplayName("add 45+10 = 55")
 
-    void fortyFivePlusTen(){assertEquals(55,5);}
+    void addTwoNumbers() {assertEquals(55, calculator.add(45,10),"45 + 10 should be 55");
 
-    @Test
-    @DisplayName("Test subtract 13 -5 = 8")
-
-    void thirteenMinusFive(){assertEquals(8,8);}
+    }
 
     @Test
-    @DisplayName("Test divide 50 / 2 = 25")
+    @DisplayName("subtract 13 -5 = 8")
 
-    void fiftyDividedByTwo(){assertEquals(25,25);}
+    void subtractTwoNumbers() {assertEquals(8, calculator.subtract(13,5),"13 - 5 should be 8");
+
+    }
+
+    @Test
+    @DisplayName("divide 50 / 2 = 25")
+
+    void divideTwoNumbers() {assertEquals(25, calculator.divide(50,2),"50 / 2 should be 25");
+
+    }
+
+    @Test
+    @DisplayName("multiply 6 * 8 = 48")
+
+    void multiplyTwoNumbers() { assertEquals(48, calculator.multiply(6,8),"6 * 8 should be 48");
+
+    }
 
     }
 
